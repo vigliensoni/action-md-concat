@@ -47,7 +47,8 @@ jobs:
           awk '!/dist\/**\/*/' .gitignore > tmp && mv tmp .gitignore
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add .
+          git add . --force
+          git add dist/ -f
           git commit -m "release"
 
       - name: Creating version tag
