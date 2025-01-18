@@ -20,7 +20,7 @@ jobs:
 
       - name: Check if version has been updated 
         id: check
-        uses: EndBug/version-check@v3
+        uses: EndBug/version-check@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           diff-search: true
